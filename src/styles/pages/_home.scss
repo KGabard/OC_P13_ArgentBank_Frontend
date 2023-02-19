@@ -1,0 +1,13 @@
+.home {
+  &__info-sections-container {
+    display: flex;
+  }
+}
+
+@include tablet {
+  .home {
+    &__info-sections-container {
+      flex-direction: column;
+    }
+  }
+}

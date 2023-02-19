@@ -1,0 +1,44 @@
+.info-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 40px;
+  width: 0;
+  flex: 1 1 0px;
+
+  &__logo {
+    height: 152px;
+    aspect-ratio: 1;
+    border: 10px solid $highlight-primary;
+    border-radius: 50%;
+    padding: 16px;
+  }
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 16px;
+
+    &__title {
+      @include typographies(title-big);
+      color: $neutral-primary;
+      width: 100%;
+      text-align: center;
+    }
+
+    &__text {
+      @include typographies(body);
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+@include tablet {
+  .info-section {
+    width: 100%;
+  }
+}

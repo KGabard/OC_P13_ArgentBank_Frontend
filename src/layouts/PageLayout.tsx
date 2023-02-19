@@ -6,7 +6,7 @@ const PageLayout = ({ children }: PropsWithChildren) => {
   return (
     <>
       <Header />
-      {children}
+      <section className="main-section">{children}</section>
       <Footer />
     </>
   )
