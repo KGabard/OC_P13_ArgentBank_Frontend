@@ -2,7 +2,9 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className='footer'>Footer</div>
+    <footer className='footer'>
+      <h2 className="footer__quote">Copyright 2020 Argent Bank</h2>
+    </footer>
   )
 }
 
