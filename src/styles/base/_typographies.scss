@@ -1,119 +1,185 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
 $typographies: (
-  header: (
+  header-big: (
     font-family: (
-      'Roboto',
+      Avenir,
+      Helvetica,
+      Arial,
       sans-serif,
     ),
-    font-weight: 500,
-    font-size: 48px,
+    font-weight: bold,
+    font-size: 2.5rem,
+  ),
+  header: (
+    font-family: (
+      Avenir,
+      Helvetica,
+      Arial,
+      sans-serif,
+    ),
+    font-weight: bold,
+    font-size: 2rem,
+  ),
+  header-small: (
+    font-family: (
+      Avenir,
+      Helvetica,
+      Arial,
+      sans-serif,
+    ),
+    font-weight: bold,
+    font-size: 1.5rem,
+  ),
+  title-big: (
+    font-family: (
+      Avenir,
+      Helvetica,
+      Arial,
+      sans-serif,
+    ),
+    font-weight: bold,
+    font-size: 1.25rem,
   ),
   title: (
     font-family: (
-      'Roboto',
+      Avenir,
+      Helvetica,
+      Arial,
       sans-serif,
     ),
-    font-weight: 500,
-    font-size: 24px,
+    font-weight: normal,
+    font-size: 1.2rem,
   ),
-  card-title: (
+  title-small: (
     font-family: (
-      'Roboto',
+      Avenir,
+      Helvetica,
+      Arial,
       sans-serif,
     ),
-    font-weight: 700,
-    font-size: 20px,
+    font-weight: bold,
+    font-size: 1.1rem,
   ),
-  subtitle: (
+  body-bold: (
     font-family: (
-      'Roboto',
+      Avenir,
+      Helvetica,
+      Arial,
       sans-serif,
     ),
-    font-weight: 400,
-    font-size: 18px,
-  ),
-  chart-title: (
-    font-family: (
-      'Roboto',
-      sans-serif,
-    ),
-    font-weight: 500,
-    font-size: 15px,
+    font-weight: bold,
+    font-size: 1rem,
   ),
   body: (
     font-family: (
-      'Roboto',
+      Avenir,
+      Helvetica,
+      Arial,
       sans-serif,
     ),
-    font-weight: 500,
-    font-size: 14px,
+    font-weight: normal,
+    font-size: 1rem,
   ),
   body-small: (
     font-family: (
-      'Roboto',
+      Avenir,
+      Helvetica,
+      Arial,
       sans-serif,
     ),
-    font-weight: 500,
-    font-size: 12px,
+    font-weight: normal,
+    font-size: 0.9rem,
   ),
 );
 
 $mobile-typographies: (
-  header: (
+  header-big: (
     font-family: (
-      'Roboto',
+      Avenir,
+      Helvetica,
+      Arial,
       sans-serif,
     ),
-    font-weight: 500,
-    font-size: 32px,
+    font-weight: bold,
+    font-size: 2.5rem,
+  ),
+  header: (
+    font-family: (
+      Avenir,
+      Helvetica,
+      Arial,
+      sans-serif,
+    ),
+    font-weight: bold,
+    font-size: 2rem,
+  ),
+  header-small: (
+    font-family: (
+      Avenir,
+      Helvetica,
+      Arial,
+      sans-serif,
+    ),
+    font-weight: bold,
+    font-size: 1.5rem,
+  ),
+  title-big: (
+    font-family: (
+      Avenir,
+      Helvetica,
+      Arial,
+      sans-serif,
+    ),
+    font-weight: bold,
+    font-size: 1.25rem,
   ),
   title: (
     font-family: (
-      'Roboto',
+      Avenir,
+      Helvetica,
+      Arial,
       sans-serif,
     ),
-    font-weight: 500,
-    font-size: 20px,
+    font-weight: normal,
+    font-size: 1.2rem,
   ),
-  card-title: (
+  title-small: (
     font-family: (
-      'Roboto',
+      Avenir,
+      Helvetica,
+      Arial,
       sans-serif,
     ),
-    font-weight: 700,
-    font-size: 18px,
+    font-weight: bold,
+    font-size: 1.1rem,
   ),
-  subtitle: (
+  body-bold: (
     font-family: (
-      'Roboto',
+      Avenir,
+      Helvetica,
+      Arial,
       sans-serif,
     ),
-    font-weight: 400,
-    font-size: 16px,
-  ),
-  chart-title: (
-    font-family: (
-      'Roboto',
-      sans-serif,
-    ),
-    font-weight: 500,
-    font-size: 13px,
+    font-weight: bold,
+    font-size: 1rem,
   ),
   body: (
     font-family: (
-      'Roboto',
+      Avenir,
+      Helvetica,
+      Arial,
       sans-serif,
     ),
-    font-weight: 500,
-    font-size: 12px,
+    font-weight: normal,
+    font-size: 1rem,
   ),
   body-small: (
     font-family: (
-      'Roboto',
+      Avenir,
+      Helvetica,
+      Arial,
       sans-serif,
     ),
-    font-weight: 500,
-    font-size: 10px,
+    font-weight: normal,
+    font-size: 0.9rem,
   ),
 );
