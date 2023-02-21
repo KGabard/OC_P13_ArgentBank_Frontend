@@ -51,7 +51,7 @@
 
       &__error {
         color: red;
-        @include typographies(body)
+        @include typographies(body);
       }
     }
 
@@ -62,14 +62,7 @@
       border: none;
       padding: 8px;
       @include typographies(title-small);
-      text-decoration: underline;
-      text-decoration-color: transparent;
-      transition: text-decoration-color 200ms ease-in-out;
-      cursor: pointer;
-
-      &:hover {
-        text-decoration-color: $basic-white;
-      }
+      @include button-hover($basic-white);
     }
   }
 }

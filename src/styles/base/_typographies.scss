@@ -81,6 +81,16 @@ $typographies: (
     font-weight: normal,
     font-size: 1rem,
   ),
+  body-small: (
+    font-family: (
+      Avenir,
+      Helvetica,
+      Arial,
+      sans-serif,
+    ),
+    font-weight: bold,
+    font-size: 0.85rem,
+  ),
   banner-title: (
     font-family: (
       Avenir,
@@ -183,6 +193,16 @@ $mobile-typographies: (
     ),
     font-weight: normal,
     font-size: 1rem,
+  ),
+  body-small: (
+    font-family: (
+      Avenir,
+      Helvetica,
+      Arial,
+      sans-serif,
+    ),
+    font-weight: bold,
+    font-size: 0.85rem,
   ),
   banner-title: (
     font-family: (

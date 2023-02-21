@@ -19,7 +19,7 @@ export const useForm = (callback: any, initialState = {}) => {
       switch (key) {
         case 'email':
           if (
-            /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(
+            /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(
               newData[key].value.toString()
             )
           ) {

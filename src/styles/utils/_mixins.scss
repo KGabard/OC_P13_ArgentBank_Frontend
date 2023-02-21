@@ -4,6 +4,12 @@
   }
 }
 
+@mixin mobile {
+  @media screen and (max-width: 720px) {
+    @content;
+  }
+}
+
 @mixin typographies($type) {
   $typography: map-get($typographies, $type);
   @each $attribute, $val in $typography {
@@ -23,4 +29,15 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+@mixin button-hover($color) {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 200ms ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration-color: $color;
+  }
 }

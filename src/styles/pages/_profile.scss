@@ -1,0 +1,23 @@
+.profile {
+  min-height: fit-content;
+  flex: 1 1 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $highlight-secondary;
+  gap: 32px;
+  padding: 32px 96px;
+
+  &__title {
+    color: white;
+    @include typographies(header);
+    white-space: break-spaces;
+    text-align: center;
+  }
+}
+
+@include mobile {
+  .profile {
+    padding: 32px;
+  }
+}

@@ -21,11 +21,7 @@
       @include typographies(body-bold);
       text-decoration-color: transparent;
       color: $neutral-secondary;
-      transition: text-decoration-color 200ms ease-in-out;
-
-      &:hover {
-        text-decoration-color: $neutral-secondary;
-      }
+      @include button-hover($neutral-secondary);
     }
   }
 }

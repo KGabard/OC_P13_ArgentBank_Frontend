@@ -1,0 +1,55 @@
+.account-section {
+  width: 100%;
+  padding: 24px;
+  background-color: $basic-white;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: 1fr auto;
+  gap: 2px;
+
+  &__title {
+    grid-row: 1;
+    grid-column: 1/2;
+    @include typographies(body);
+  }
+
+  &__amount {
+    grid-row: 2;
+    grid-column: 1/2;
+    @include typographies(header-big);
+  }
+
+  &__subtitle {
+    grid-row: 3;
+    grid-column: 1/2;
+    @include typographies(body);
+  }
+
+  &__view-button {
+    grid-row: 1/-1;
+    grid-column: 2/3;
+    height: fit-content;
+    width: fit-content;
+    background-color: $highlight-primary;
+    padding: 12px 24px;
+    @include typographies(title-small);
+    color: $basic-white;
+    border: none;
+    align-self: end;
+    @include button-hover($basic-white);
+  }
+}
+
+@include mobile {
+  .account-section {
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 1fr;
+  
+    &__view-button {
+      grid-row: 4;
+      grid-column: 1/-1;
+      width: 100%;
+      margin-top: 16px;
+    }
+  }
+}

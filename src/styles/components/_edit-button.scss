@@ -1,0 +1,8 @@
+.edit-button {
+  background-color: $highlight-primary;
+  border: none;
+  padding: 12px;
+  @include typographies(body-small);
+  color: $basic-white;
+  @include button-hover($basic-white);
+}
