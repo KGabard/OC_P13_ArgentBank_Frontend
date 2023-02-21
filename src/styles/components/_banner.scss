@@ -8,16 +8,16 @@
   padding: 88px;
 
   &__text-container {
-    width: 264px;
+    width: 364px;
     background-color: $basic-white;
     padding: 32px;
 
     &__title {
-      @include typographies(body-bold);
+      @include typographies(banner-title);
     }
 
     &__text {
-      @include typographies(body-small);
+      @include typographies(banner-body);
       margin-top: 16px;
     }
   }
@@ -29,5 +29,8 @@
     align-items: center;
     padding: 32px;
 
+    &__text-container {
+      width: 264px;
+    }
   }
 }

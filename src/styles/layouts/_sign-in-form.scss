@@ -1,0 +1,75 @@
+.sign-in-form {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  gap: 16px;
+  background-color: $basic-white;
+  margin-top: 48px;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    &__logo {
+      height: 16px;
+      aspect-ratio: 1;
+    }
+
+    &__title {
+      @include typographies(header-small);
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__input-container {
+      display: flex;
+
+      &--text {
+        gap: 4px;
+        @include typographies(body-bold);
+        flex-direction: column;
+      }
+
+      &--checkbox {
+        gap: 8px;
+        @include typographies(body);
+        flex-direction: row-reverse;
+        justify-content: start;
+      }
+
+      &__input {
+        @include typographies(title);
+        padding: 4px;
+      }
+
+      &__error {
+        color: red;
+        @include typographies(body)
+      }
+    }
+
+    &__submit-button {
+      color: $basic-white;
+      background-color: $highlight-primary;
+      width: 100%;
+      border: none;
+      padding: 8px;
+      @include typographies(title-small);
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      transition: text-decoration-color 200ms ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration-color: $basic-white;
+      }
+    }
+  }
+}

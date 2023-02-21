@@ -1,6 +1,8 @@
-.main-section {
+.sign-in {
   min-height: fit-content;
   flex: 1 1 0px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  background-color: $highlight-secondary;
 }

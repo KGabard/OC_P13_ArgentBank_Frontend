@@ -69,7 +69,7 @@ $typographies: (
       sans-serif,
     ),
     font-weight: bold,
-    font-size: 1.25rem,
+    font-size: 1rem,
   ),
   body: (
     font-family: (
@@ -79,9 +79,19 @@ $typographies: (
       sans-serif,
     ),
     font-weight: normal,
-    font-size: 1.25rem,
+    font-size: 1rem,
   ),
-  body-small: (
+  banner-title: (
+    font-family: (
+      Avenir,
+      Helvetica,
+      Arial,
+      sans-serif,
+    ),
+    font-weight: bold,
+    font-size: 1.5rem,
+  ),
+  banner-body: (
     font-family: (
       Avenir,
       Helvetica,
@@ -89,7 +99,7 @@ $typographies: (
       sans-serif,
     ),
     font-weight: normal,
-    font-size: 1rem,
+    font-size: 1.2rem,
   ),
 );
 
@@ -174,7 +184,17 @@ $mobile-typographies: (
     font-weight: normal,
     font-size: 1rem,
   ),
-  body-small: (
+  banner-title: (
+    font-family: (
+      Avenir,
+      Helvetica,
+      Arial,
+      sans-serif,
+    ),
+    font-weight: bold,
+    font-size: 1rem,
+  ),
+  banner-body: (
     font-family: (
       Avenir,
       Helvetica,

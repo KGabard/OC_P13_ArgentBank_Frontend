@@ -1,7 +1,9 @@
+import SingInForm from "../layouts/SingInForm"
+
 const SignIn = () => {
   return (
     <div className="sign-in">
-      <h1 className="sign-in__title">Sign In</h1>
+      <SingInForm />
     </div>
   )
 }
