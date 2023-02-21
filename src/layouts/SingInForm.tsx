@@ -2,16 +2,23 @@ import React from 'react'
 import { useForm } from '../scripts/hooks/useForm'
 import userIcon from '../assets/icons/icon-circle-user.svg'
 import { useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux/es/exports'
+import { rememberLoginData } from '../scripts/redux/user'
+import { selectUser } from '../scripts/redux/selectors'
 
 function SingInForm() {
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+  const user = useSelector(selectUser)
+
   // defining the initial state for the form
   const initialState = {
     email: {
-      value: '',
+      value: user.email,
       error: '',
     },
     password: {
-      value: '',
+      value: user.password,
       error: '',
     },
     rememberMe: {
@@ -19,9 +26,6 @@ function SingInForm() {
       error: '',
     },
   }
-
-  const navigate = useNavigate()
-
   // getting the event handlers from our custom hook
   const { onChange, onSubmit, data } = useForm(loginUserCallback, initialState)
 
@@ -29,6 +33,19 @@ function SingInForm() {
   async function loginUserCallback() {
     // send "values" to database
     console.log(data)
+
+    let rememberMeData = false
+    let emailData = ''
+    let passwordData = ''
+
+    if (typeof data['rememberMe'].value === 'boolean')
+      rememberMeData = data['rememberMe'].value
+    if (typeof data['email'].value === 'string') emailData = data['email'].value
+    if (typeof data['password'].value === 'string')
+      passwordData = data['password'].value
+
+    dispatch(rememberLoginData(rememberMeData, emailData, passwordData))
+
     navigate('/profile')
   }
 
@@ -57,6 +74,7 @@ function SingInForm() {
             type="text"
             placeholder="Email"
             onChange={onChange}
+            value={data.email.value.toString()}
           />
           {data['email'].error.length > 0 && (
             <p className="sign-in-form__form__input-container__error">
@@ -79,6 +97,7 @@ function SingInForm() {
             type="password"
             placeholder="Password"
             onChange={onChange}
+            value={data.password.value.toString()}
           />
           {data['password'].error.length > 0 && (
             <p className="sign-in-form__form__input-container__error">
