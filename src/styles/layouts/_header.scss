@@ -24,4 +24,27 @@
       @include button-hover($neutral-secondary);
     }
   }
+
+  &__sign-out-wrapper {
+    display: flex;
+    gap: 4px;
+
+    &__user-logo,
+    &__sign-out-logo {
+      height: 16px;
+      aspect-ratio: 1;
+    }
+
+    &__user-link {
+      margin-right: 12px;
+    }
+
+    &__sign-out-link,
+    &__user-link {
+      @include typographies(body-bold);
+      text-decoration-color: transparent;
+      color: $neutral-secondary;
+      @include button-hover($neutral-secondary);
+    }
+  }
 }

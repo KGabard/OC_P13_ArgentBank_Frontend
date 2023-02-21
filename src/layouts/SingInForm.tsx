@@ -29,7 +29,7 @@ function SingInForm() {
   async function loginUserCallback() {
     // send "values" to database
     console.log(data)
-    navigate('/profile/1')
+    navigate('/profile')
   }
 
   return (

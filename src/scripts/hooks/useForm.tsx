@@ -30,10 +30,7 @@ export const useForm = (callback: any, initialState = {}) => {
           }
           break
         case 'password':
-          if (
-            newData[key].value.toString().length >= 5 &&
-            newData[key].value.toString().length <= 15
-          ) {
+          if (/^[a-zA-Z0-9]{5,15}$/.test(newData[key].value.toString())) {
             newData[key].error = ''
           } else {
             newData[key].error =
