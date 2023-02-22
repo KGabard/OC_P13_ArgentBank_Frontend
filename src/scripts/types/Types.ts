@@ -14,3 +14,8 @@ export type UserType = {
     lastName: string
   }
 }
+
+export type EditUserType = {
+  status: string
+  error: string
+}

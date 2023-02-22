@@ -38,6 +38,24 @@ export const useForm = (callback: any, initialState = {}) => {
             validity = false
           }
           break
+        case 'firstName':
+          if (/^[a-zA-Z0-9]{2,15}$/.test(newData[key].value.toString())) {
+            newData[key].error = ''
+          } else {
+            newData[key].error =
+              'Please enter a first name containing between 2 and 15 characters.'
+            validity = false
+          }
+          break
+        case 'lastName':
+          if (/^[a-zA-Z0-9]{2,15}$/.test(newData[key].value.toString())) {
+            newData[key].error = ''
+          } else {
+            newData[key].error =
+              'Please enter a last name containing between 2 and 15 characters.'
+            validity = false
+          }
+          break
       }
     }
 

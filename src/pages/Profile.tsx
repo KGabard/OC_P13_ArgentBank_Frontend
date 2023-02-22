@@ -3,12 +3,14 @@ import { useNavigate } from 'react-router-dom'
 import AccountSection from '../components/AccountSection'
 import EditButton from '../components/EditButton'
 import EditName from '../components/EditName'
+import { selectEditUser } from '../scripts/redux/editUser'
 import { useAppDispatch, useAppSelector } from '../scripts/redux/hooks'
 import { fetchOrUpdateUserData, selectUser } from '../scripts/redux/user'
 
 const Profile = () => {
   const dispatch = useAppDispatch()
   const user = useAppSelector(selectUser)
+  const editUser = useAppSelector(selectEditUser)
   const navigate = useNavigate()
 
   const [enableEditing, setEnableEditing] = useState(false)
@@ -25,7 +27,12 @@ const Profile = () => {
     }
   }, [user.connection.isConnected, navigate])
 
-  //! Ajout de la possibilité d'éditer le nom de l'utilisateur
+  useEffect(() => {
+    if (editUser.status === 'resolved') {
+      dispatch(fetchOrUpdateUserData(user.connection.token))
+      setEnableEditing(false)
+    }
+  }, [editUser.status, user.connection.token, dispatch])
 
   return (
     <div className="profile">
