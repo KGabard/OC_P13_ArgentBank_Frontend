@@ -194,6 +194,9 @@ const { actions, reducer } = createSlice({
         state.connection.status = 'void'
         state.connection.isConnected = false
         state.connection.token = ''
+        state.userData.status = 'void'
+        state.userData.firstName = ''
+        state.userData.lastName = ''
       }
     },
   },

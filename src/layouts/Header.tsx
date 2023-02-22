@@ -7,7 +7,6 @@ import { useAppDispatch, useAppSelector } from '../scripts/redux/hooks'
 import { selectUser, signOut } from '../scripts/redux/user'
 
 function Header() {
-  const name = 'MAJ'
   const user = useAppSelector(selectUser)
   const navigate = useNavigate()
   const dispatch = useAppDispatch()
@@ -30,7 +29,7 @@ function Header() {
             className="header__sign-out-wrapper__user-logo"
           />
           <Link to={'/profile'} className="header__sign-out-wrapper__user-link">
-            {name}
+            {user.userData.firstName}
           </Link>
           <img
             src={signOutIcon}

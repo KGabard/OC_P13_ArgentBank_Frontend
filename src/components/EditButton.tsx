@@ -1,8 +1,19 @@
 import React from 'react'
 
-function EditButton() {
+type Props = {
+  setEnableEditing: (enable: boolean) => void
+}
+
+function EditButton({ setEnableEditing }: Props) {
   return (
-    <button className='edit-button'>Edit Name</button>
+    <button
+      className="edit-button"
+      onClick={() => {
+        setEnableEditing(true)
+      }}
+    >
+      Edit Name
+    </button>
   )
 }
 

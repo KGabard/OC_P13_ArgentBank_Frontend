@@ -1,0 +1,54 @@
+.edit-name {
+  &__form {
+    width: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 16px;
+    row-gap: 8px;
+
+    &__input-container {
+      &__label {
+        display: none;
+      }
+
+      &__input {
+        width: 100%;
+        @include typographies(title);
+        padding: 4px;
+      }
+
+      &__error {
+        color: red;
+        @include typographies(body);
+      }
+    }
+
+    &__save-button,
+    &__cancel-button {
+      width: 104px;
+      background-color: $highlight-primary;
+      border: none;
+      padding: 12px;
+      @include typographies(body-small);
+      color: $basic-white;
+      @include button-hover($basic-white);
+    }
+
+    &__save-button {
+      justify-self: end;
+    }
+  }
+}
+
+@include mobile {
+  .edit-name {
+    &__form {
+      width: 256px;
+
+      &__input-container {
+        grid-column: 1/-1;
+      }
+    }
+  }
+}
