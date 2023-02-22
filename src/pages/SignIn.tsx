@@ -1,4 +1,4 @@
-import SingInForm from "../layouts/SingInForm"
+import SingInForm from '../layouts/SingInForm'
 
 const SignIn = () => {
   return (

@@ -1,7 +1,17 @@
+import { useEffect } from 'react'
 import Banner from '../components/Banner'
 import InfoSection from '../components/InfoSection'
+import { useAppDispatch, useAppSelector } from '../scripts/redux/hooks'
+import { selectUser, signOut } from '../scripts/redux/user'
 
 const Home = () => {
+  const user = useAppSelector(selectUser)
+  const dispatch = useAppDispatch()
+
+  useEffect(() => {
+    if (user.connection.isConnected) dispatch(signOut())
+  }, [user.connection.isConnected, dispatch])
+
   return (
     <div className="home">
       <Banner />

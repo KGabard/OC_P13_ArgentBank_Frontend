@@ -36,6 +36,7 @@ function EditName({ setEnableEditing }: Props) {
       firstNameData = data['firstName'].value
     if (typeof data['lastName'].value === 'string')
       lastNameData = data['lastName'].value
+
     dispatch(fetchOrUpdate(user.connection.token, firstNameData, lastNameData))
   }
 

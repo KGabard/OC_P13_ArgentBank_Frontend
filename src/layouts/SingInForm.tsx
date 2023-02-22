@@ -25,7 +25,7 @@ function SingInForm() {
       error: '',
     },
     rememberMe: {
-      value: false,
+      value: true,
       error: '',
     },
   }
@@ -126,6 +126,12 @@ function SingInForm() {
             id="rememberMe"
             type="checkbox"
             onChange={onChange}
+            defaultChecked
+            checked={
+              typeof data.rememberMe.value === 'boolean'
+                ? data.rememberMe.value
+                : undefined
+            }
           />
         </div>
 
