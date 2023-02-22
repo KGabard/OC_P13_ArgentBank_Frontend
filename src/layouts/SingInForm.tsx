@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useForm } from '../scripts/hooks/useForm'
 import userIcon from '../assets/icons/icon-circle-user.svg'
 import { useNavigate } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux/es/exports'
-import { rememberLoginData } from '../scripts/redux/user'
-import { selectUser } from '../scripts/redux/selectors'
+import {
+  fetchOrUpdateConnection,
+  rememberLoginData,
+  selectUser,
+} from '../scripts/redux/user'
+import { useAppDispatch, useAppSelector } from '../scripts/redux/hooks'
 
 function SingInForm() {
   const navigate = useNavigate()
-  const dispatch = useDispatch()
-  const user = useSelector(selectUser)
+  const dispatch = useAppDispatch()
+  const user = useAppSelector(selectUser)
 
   // defining the initial state for the form
   const initialState = {
@@ -30,10 +33,8 @@ function SingInForm() {
   const { onChange, onSubmit, data } = useForm(loginUserCallback, initialState)
 
   // a submit function that will execute upon form submission
-  async function loginUserCallback() {
-    // send "values" to database
-    console.log(data)
-
+  function loginUserCallback() {
+    // send "data" to database
     let rememberMeData = false
     let emailData = ''
     let passwordData = ''
@@ -46,8 +47,14 @@ function SingInForm() {
 
     dispatch(rememberLoginData(rememberMeData, emailData, passwordData))
 
-    navigate('/profile')
+    dispatch(fetchOrUpdateConnection(emailData, passwordData))
   }
+
+  useEffect(() => {
+    if (user.connection.isConnected) {
+      navigate('/profile')
+    }
+  }, [user.connection.isConnected, navigate])
 
   return (
     <section className="sign-in-form">
@@ -122,9 +129,27 @@ function SingInForm() {
           />
         </div>
 
-        <button className="sign-in-form__form__submit-button" type="submit">
-          Sign In
+        <button
+          className="sign-in-form__form__submit-button"
+          type="submit"
+          style={
+            user.connection.status === 'pending' ||
+            user.connection.status === 'updating'
+              ? { textDecoration: 'none' }
+              : {}
+          }
+        >
+          {user.connection.status === 'pending' ||
+          user.connection.status === 'updating'
+            ? 'Loading'
+            : 'Sign In'}
         </button>
+
+        {user.connection.error.length > 0 && (
+          <p className="sign-in-form__form__login-error">
+            {user.connection.error}
+          </p>
+        )}
       </form>
     </section>
   )

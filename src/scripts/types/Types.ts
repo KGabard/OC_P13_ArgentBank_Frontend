@@ -1,12 +1,15 @@
 export type UserType = {
   email: string
   password: string
-  token: {
-    status: string
-    value: string
+  connection: {
+    status: 'void' | 'pending' | 'updating' | 'resolved' | 'rejected'
+    error: string
+    token: string
+    isConnected: boolean
   }
-  data: {
-    status: string
+  userData: {
+    status: 'void' | 'pending' | 'updating' | 'resolved' | 'rejected'
+    error: string
     firstName: string
     lastName: string
   }

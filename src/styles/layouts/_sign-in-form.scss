@@ -68,5 +68,10 @@
       @include typographies(title-small);
       @include button-hover($basic-white);
     }
+
+    &__login-error {
+      color: red;
+      @include typographies(body);
+    }
   }
 }
