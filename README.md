@@ -4,8 +4,8 @@
 - Intégrer une application React à partir de designs.
 - Développer l'application avec Typecscript.
 - Utilisation de Redux Toolkit pour la gestion du state.
-- Mettre en place un système d'appels API depuis le store vers un backend.
-- Utilisation d'un système sécurisé de connection à un compte utilisateur (JWT token).
+- Mise en place un système d'appels API depuis le store vers un backend.
+- Utilisation d'un système sécurisé de connexion à un compte utilisateur (JWT token).
 
 ## Description
 L'application ArgentBank permet à ces utilisateurs de se connecter de façon sécurisée à leur compte en banque.
