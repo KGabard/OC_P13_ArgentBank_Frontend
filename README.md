@@ -41,7 +41,7 @@ Ensuite, vous devrez installer toutes les dépendances du projet avec `npm insta
 Pour lancer le projet il ne vous reste plus qu'à utiliser la commande : `npm start`.
 
 ### Backend
-La base de donnée vers laquelle sont effectués les appels API est hébergé par le backend du projet.
+La base de donnée vers laquelle sont effectués les appels API est hébergée par le backend du projet.
 
 Il est nécessaire de mettre en place le backend avant de lancer le frontend.
 
