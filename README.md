@@ -1,46 +1,50 @@
-# Getting Started with Create React App
+# OC Projet n°13 : ArgentBank
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Objectifs
+- Intégrer une application React à partir de designs.
+- Développer l'application avec Typecscript.
+- Utilisation de Redux Toolkit pour la gestion du state.
+- Mettre en place un système d'appels API depuis le store vers un backend.
+- Utilisation d'un système sécurisé de connection à un compte utilisateur (JWT token).
 
-## Available Scripts
+## Description
+L'application ArgentBank permet à ces utilisateurs de se connecter de façon sécurisée à leur compte en banque.
 
-In the project directory, you can run:
+## Technologies
+Framework :
+- React
 
-### `npm start`
+Langages :
+- Typescript
+- HTML
+- CSS
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Outils :
+- Redux Toolkit
+- Redux Persist
+- React Router
+- SASS
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Designs
+Les designs sont fournis par Openclassrooms : [ici](https://github.com/KGabard/OC_P13_ArgentBank_Backend/tree/master/designs)
 
-### `npm test`
+## Guide d'installation et d'utilisation :
+### Frontend
+Le projet utilise des packages Node et utilise npm, donc l'installation de Node.js dans votre IDE est requise.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Une fois que Node.js a été ajouté avec succès à votre IDE, vous devrez :
+- Forker ce repository.
+- Le cloner localement avec `git clone`
 
-### `npm run build`
+Ensuite, vous devrez installer toutes les dépendances du projet avec `npm install`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Pour lancer le projet il ne vous reste plus qu'à utiliser la commande : `npm start`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Backend
+La base de donnée vers laquelle sont effectués les appels API est hébergé par le backend du projet.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Il est nécessaire de mettre en place le backend avant de lancer le frontend.
 
-### `npm run eject`
+Pour cela il suffit de suivre les instructions données [ici](https://github.com/KGabard/OC_P13_ArgentBank_Backend).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+JH : 4
