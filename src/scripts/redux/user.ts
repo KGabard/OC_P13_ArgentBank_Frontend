@@ -1,13 +1,7 @@
 import { AnyAction, createSlice, ThunkDispatch } from '@reduxjs/toolkit'
 import { PayloadAction } from '@reduxjs/toolkit/dist/createAction'
-import { UserType } from '../types/Types'
+import { RememberLoginDataType, UserType } from '../types/Types'
 import { RootState } from './store'
-
-type RememberLoginDataType = {
-  remember: boolean
-  email: string
-  password: string
-}
 
 export function fetchOrUpdateConnection(email: string, password: string) {
   // on retourne un thunk
@@ -24,16 +18,19 @@ export function fetchOrUpdateConnection(email: string, password: string) {
 
     try {
       // on utilise fetch pour faire la requête
-      const response = await fetch('http://localhost:3001/api/v1/user/login', {
-        method: 'POST',
-        body: JSON.stringify({
-          email: email,
-          password: password,
-        }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      })
+      const response = await fetch(
+        process.env.REACT_APP_API_BASE_URL + '/user/login',
+        {
+          method: 'POST',
+          body: JSON.stringify({
+            email: email,
+            password: password,
+          }),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      )
       data = await response.json()
       dispatch(actions.resolvedConnection(data.body.token))
     } catch (error) {
@@ -58,7 +55,7 @@ export function fetchOrUpdateUserData(token: string) {
     try {
       // on utilise fetch pour faire la requête
       const response = await fetch(
-        'http://localhost:3001/api/v1/user/profile',
+        process.env.REACT_APP_API_BASE_URL + '/user/profile',
         {
           method: 'POST',
           headers: {

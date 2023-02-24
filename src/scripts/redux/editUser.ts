@@ -27,7 +27,7 @@ export function fetchOrUpdate(
     try {
       // on utilise fetch pour faire la requête
       const response = await fetch(
-        'http://localhost:3001/api/v1/user/profile',
+        process.env.REACT_APP_API_BASE_URL + '/user/profile',
         {
           method: 'PUT',
           body: JSON.stringify({

@@ -1,3 +1,9 @@
+export type RememberLoginDataType = {
+  remember: boolean
+  email: string
+  password: string
+}
+
 export type UserType = {
   email: string
   password: string
