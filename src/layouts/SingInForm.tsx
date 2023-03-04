@@ -126,7 +126,6 @@ function SingInForm() {
             id="rememberMe"
             type="checkbox"
             onChange={onChange}
-            defaultChecked
             checked={
               typeof data.rememberMe.value === 'boolean'
                 ? data.rememberMe.value
